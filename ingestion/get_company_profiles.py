@@ -48,7 +48,8 @@ def save_json_locally(data, symbol):
     output_file = symbol_dir / "profile.json"
 
     with open(output_file, "w") as file:
-        json.dump(data, file, indent=2)
+        json.dump(data, file)
+        file.write("\n")
 
     print(f"Saved local file: {output_file}")
 
